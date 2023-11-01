@@ -1,0 +1,2 @@
+# QEQt
+Quadratic equations Qt
