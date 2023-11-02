@@ -21,7 +21,7 @@ from PySide6.QtWidgets import (QApplication, QCheckBox, QLabel, QLineEdit,
 class Ui_Widget(object):
     def setupUi(self, Widget):
         if not Widget.objectName():
-            Widget.setObjectName(u"Widget")
+            Widget.setObjectName(u"QuadQt")
         Widget.setEnabled(True)
         Widget.resize(705, 503)
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)

@@ -9,7 +9,7 @@ from PySide6.QtWidgets import QApplication, QWidget
 #     pyside2-uic form.ui -o ui_form.py
 from ui_form import Ui_Widget
 
-from quadratic_equations import *
+from QuadEq import *
 
 from fractions import Fraction as Frc
 from decimal import Decimal as Dec
