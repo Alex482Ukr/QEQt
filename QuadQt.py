@@ -14,7 +14,7 @@ from QuadEq import *
 from fractions import Fraction as Frc
 from decimal import Decimal as Dec
 
-VERSION = '1.0' 
+VERSION = '1.1'
 
 class Widget(QWidget):
     def __init__(self, parent=None):
@@ -35,9 +35,7 @@ class Widget(QWidget):
             self.ui.textBrowser_multipliers.setEnabled(False)
             self.ui.label_d0.setText('')
 
-            a = int(self.ui.lineEdit_a.text())
-            b = int(self.ui.lineEdit_b.text())
-            c = int(self.ui.lineEdit_c.text())
+            a, b, c = list(map(int, self.ui.lineEdit_abc.text().split()))
             frac = self.ui.checkBox_frc.isChecked()
             var = self.ui.lineEdit_var.text() if self.ui.lineEdit_var.text() else 'x'
 
