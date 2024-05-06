@@ -58,18 +58,18 @@ class Widget(QWidget):
                 self.ui.label_x1.setEnabled(True)
                 self.ui.textBrowser_x1.setEnabled(True)
 
-                self.ui.textBrowser_dsqrt.setText(str(ans['Dsqrt']).strip('.0'))
+                self.ui.textBrowser_dsqrt.setText(str(ans['Dsqrt']).rstrip('.0') if ans['Dsqrt'] != Dec(0) else '0')
 
                 if ans['discr'] > 0:
                     self.ui.label_d0.setText('> 0')
                     self.ui.label_x2.setEnabled(True)
                     self.ui.textBrowser_x2.setEnabled(True)
 
-                    self.ui.textBrowser_x1.setText(str(ans['Xs'][0]).strip('.0'))
-                    self.ui.textBrowser_x2.setText(str(ans['Xs'][1]).strip('.0'))
+                    self.ui.textBrowser_x1.setText(str(ans['Xs'][0]).rstrip('.0') if ans['Xs'][0] != Dec(0) else '0')
+                    self.ui.textBrowser_x2.setText(str(ans['Xs'][1]).rstrip('.0') if ans['Xs'][1] != Dec(0) else '0')
                 else:
                     self.ui.label_d0.setText('= 0')
-                    self.ui.textBrowser_x1.setText(str(ans['Xs'][0]).strip('.0'))
+                    self.ui.textBrowser_x1.setText(str(ans['Xs'][0]).rstrip('.0') if ans['Xs'][0] != Dec(0) else '0')
                 
                 self.ui.textBrowser_multipliers.setEnabled(True)
                 self.ui.textBrowser_multipliers.setText(to_multipliers(a, ans['Xs'], var=var))
